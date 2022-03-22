@@ -13,7 +13,12 @@ class Dokter extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('dokter', function (Blueprint $table) {
+            $table->id();
+            $table->integer('layanan');
+            $table->string('nama_dokter', 255);
+            $table->timestamps();
+        });
     }
 
     /**

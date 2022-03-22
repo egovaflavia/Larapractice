@@ -13,7 +13,11 @@ class LayananDokter extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('layanan', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_layanan');
+            $table->timestamps();
+        });
     }
 
     /**
